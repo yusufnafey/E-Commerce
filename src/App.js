@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from "react";
+import { Switch, Route } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "./Components/Card";
+import Cart from "./Components/Cart";
 import Details from "./Components/Details";
 import Navbar from "./Components/Navbar";
 import PageNotFound from "./Components/PageNotFound";
@@ -13,10 +14,12 @@ class App extends Component {
     return (
       <Fragment>
         <Navbar />
-        <ProductList />
-        <Details />
-        <Card />
-        <PageNotFound />
+        <Switch>
+          <Route path="/" component={ProductList} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+          <Route component={PageNotFound} />
+        </Switch>
       </Fragment>
     );
   }
