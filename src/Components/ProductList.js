@@ -1,14 +1,9 @@
 import React, { Component, Fragment } from "react";
 import Product from "./Product";
 import Title from "./Title";
-import { storeProducts } from "../data";
 import { ProductConsumer } from "../context";
 
 export default class ProductList extends Component {
-  state = {
-    products: storeProducts
-  };
-
   render() {
     return (
       <Fragment>
@@ -26,7 +21,6 @@ export default class ProductList extends Component {
             </div>
           </div>
         </div>
-        {/* <Product /> */}
       </Fragment>
     );
   }
