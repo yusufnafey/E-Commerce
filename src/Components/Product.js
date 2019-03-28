@@ -43,4 +43,19 @@ export default class Product extends Component {
   }
 }
 
-const ProductWrapper = styled.div``;
+const ProductWrapper = styled.div`
+  .card {
+    border-color: transparent;
+    transition: all 1s linear;
+  }
+  .card-footer {
+    background: transparent;
+    border-top: transparent;
+    transition: all 1s linear;
+  }
+  &:hover {
+    .card {
+      border: 0.04rem solid rgba(0, 0, 0, 0.2);
+    }
+  }
+`;
