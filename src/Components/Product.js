@@ -58,5 +58,8 @@ const ProductWrapper = styled.div`
       border: 0.04rem solid rgba(0, 0, 0, 0.2);
       box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
     }
+    .card-footer {
+      background: rgb(247, 247, 247);
+    }
   }
 `;
