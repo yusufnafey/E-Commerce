@@ -67,10 +67,14 @@ const ProductWrapper = styled.div`
     overflow: hidden;
   }
   .card-img-top {
-    transition: all 0.3s linear;
+    transition: all 1s linear;
   }
   .img-container:hover .card-img-top {
     transform: scale(1.1);
+  }
+  .img-container:hover .card-btn {
+    transition: all 1s linear;
+    transform: translate(0, 0);
   }
   .card-btn {
     position: absolute;
@@ -82,5 +86,6 @@ const ProductWrapper = styled.div`
     color: var(--mainWhite);
     font-size: 1.5rem;
     border-radius: 0.5rem 0 0 0;
+    transform: translate(100%, 100%);
   }
 `;
