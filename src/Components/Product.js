@@ -88,4 +88,8 @@ const ProductWrapper = styled.div`
     border-radius: 0.5rem 0 0 0;
     transform: translate(100%, 100%);
   }
+  .card-btn:hover {
+    color: var(--mainBlue);
+    cursor: pointer;
+  }
 `;
