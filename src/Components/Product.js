@@ -66,7 +66,21 @@ const ProductWrapper = styled.div`
     position: relative;
     overflow: hidden;
   }
+  .card-img-top {
+    transition: all 0.3s linear;
+  }
   .img-container:hover .card-img-top {
     transform: scale(1.1);
+  }
+  .card-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.2rem 0.4rem;
+    background: var(--lightBlue);
+    border: none;
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    border-radius: 0.5rem 0 0 0;
   }
 `;
