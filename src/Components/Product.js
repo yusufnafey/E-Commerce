@@ -51,7 +51,7 @@ Product.propTypes = {
     title: PropTypes.string,
     price: PropTypes.number,
     inCart: PropTypes.boolean
-  })
+  }).isRequired
 };
 
 const ProductWrapper = styled.div`
