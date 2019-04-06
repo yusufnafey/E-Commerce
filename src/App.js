@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./Components/Cart";
