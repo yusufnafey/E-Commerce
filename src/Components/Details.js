@@ -53,7 +53,6 @@ export default class Details extends Component {
                       <ButtonContainer>back to products</ButtonContainer>
                     </Link>
                     <ButtonContainer
-                      className="ml-3"
                       disabled={inCart ? true : false}
                       onClick={() => {
                         value.addToCart(id);
