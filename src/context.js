@@ -31,7 +31,7 @@ class ProductProvider extends Component {
   };
 
   handleDetail = id => {
-    const product = this.getItem();
+    const product = this.getItem(id);
     this.setState(() => {
       return { detailProduct: product };
     });
