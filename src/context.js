@@ -87,7 +87,9 @@ class ProductProvider extends Component {
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
-          addToCart: this.addToCart
+          addToCart: this.addToCart,
+          openModal: this.openModal,
+          closeModal: this.closeModal
         }}
       >
         {this.props.children}
