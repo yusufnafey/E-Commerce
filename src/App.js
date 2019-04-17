@@ -8,6 +8,7 @@ import Details from "./Components/Details";
 import Navbar from "./Components/Navbar";
 import PageNotFound from "./Components/PageNotFound";
 import ProductList from "./Components/ProductList";
+import Modal from "./Components/Modal";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/cart" component={Cart} />
           <Route component={PageNotFound} />
         </Switch>
+        <Modal />
       </Fragment>
     );
   }
