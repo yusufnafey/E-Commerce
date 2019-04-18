@@ -7,9 +7,23 @@ import { Link } from "react-router-dom";
 export default class Modal extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello from modal</h1>
-      </div>
+      <ProductConsumer>
+        {value => {
+          const { modalOpen, closeModal } = value;
+          const { img, title, price } = value.modalProduct;
+
+          if (!modalOpen) {
+            return null;
+          } else {
+            <ModalContainer>
+              <div className="container" />
+            </ModalContainer>;
+          }
+          return;
+        }}
+      </ProductConsumer>
     );
   }
 }
+
+const ModalContainer = styled.div``;
