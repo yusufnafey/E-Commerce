@@ -15,15 +15,31 @@ export default class Modal extends Component {
           if (!modalOpen) {
             return null;
           } else {
-            <ModalContainer>
-              <div className="container" />
-            </ModalContainer>;
+            return (
+              <ModalContainer>
+                <div className="container">
+                  <div className="row">
+                    <div
+                      id="modal"
+                      className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize"
+                    >
+                      <h5>item added to the cart</h5>
+                    </div>
+                  </div>
+                </div>
+              </ModalContainer>
+            );
           }
-          return;
         }}
       </ProductConsumer>
     );
   }
 }
 
-const ModalContainer = styled.div``;
+const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`;
