@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Cart from "./Components/Cart";
+import Cart from "./Components/Cart/Cart";
 import Details from "./Components/Details";
 import Navbar from "./Components/Navbar";
 import PageNotFound from "./Components/PageNotFound";
