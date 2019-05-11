@@ -13,13 +13,15 @@ export default class Card extends Component {
             const { cart } = value;
             if (cart.length > 0) {
               return (
-                <Title name="your" title="cart" />
-                <CartColumns />
-              )
+                <React.Fragment>
+                  <Title name="your" title="cart" />
+                  <CartColumns />
+                </React.Fragment>
+              );
             }
           }}
         </ProductConsumer>
-        
+
         <EmptyCart />
       </section>
     );
