@@ -44,6 +44,14 @@ export default function CartItem({ item, value }) {
           </div>
         </div>
       </div>
+      <div className="col-10 mx-auto col-lg-2">
+        <div className="cart-icon">
+          <i className="fas fa-trash" />
+        </div>
+      </div>
+      <div className="col-10 mx-auto col-lg-2">
+        <strong>total: ${total}</strong>
+      </div>
     </div>
   );
 }
