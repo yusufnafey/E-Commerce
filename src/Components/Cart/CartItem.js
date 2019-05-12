@@ -5,9 +5,10 @@ export default function CartItem({ item, value }) {
   const { increment, decrement, removeItem } = value;
 
   return (
-    <div>
-      cart item
-      <div>hi</div>
+    <div className="row text-capitalize my-1 text-center">
+      <div className="col-10 mx-auto col-lg-2">
+        <img src={img} />
+      </div>
     </div>
   );
 }
