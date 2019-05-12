@@ -5,7 +5,7 @@ export default function CartItem({ item, value }) {
   const { increment, decrement, removeItem } = value;
 
   return (
-    <div className="row text-capitalize my-1 text-center">
+    <div className="row text-capitalize my-2 text-center">
       <div className="col-10 mx-auto col-lg-2">
         <img
           src={img}
@@ -45,7 +45,12 @@ export default function CartItem({ item, value }) {
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2">
-        <div className="cart-icon">
+        <div
+          className="cart-icon"
+          onClick={() => {
+            removeItem(id);
+          }}
+        >
           <i className="fas fa-trash" />
         </div>
       </div>
