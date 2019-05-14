@@ -56,8 +56,7 @@ class ProductProvider extends Component {
       () => {
         return {
           products: tempProducts,
-          cart: [...this.state.cart],
-          product
+          cart: [...this.state.cart, product]
         };
       },
       () => {
