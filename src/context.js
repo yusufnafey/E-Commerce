@@ -99,6 +99,14 @@ class ProductProvider extends Component {
     console.log("clear cart method");
   };
 
+  addTotals = () => {
+    let subTotal = 0;
+    this.state.cart.map(item => {
+      subTotal += item.total;
+    });
+    const temporaryTax = subTotal * 0.1;
+  };
+
   render() {
     return (
       <ProductContext.Provider
