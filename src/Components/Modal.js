@@ -28,7 +28,7 @@ export default class Modal extends Component {
                         src={img}
                         className="image-fluid"
                         alt="product"
-                        style={{ width: 300 }}
+                        style={{ width: 275 }}
                       />
                       <h5>{title}</h5>
                       <h5 className="text-muted">price: $ {price}</h5>
