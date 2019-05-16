@@ -60,7 +60,7 @@ class ProductProvider extends Component {
         };
       },
       () => {
-        console.log(this.state);
+        this.addTotals();
       }
     );
   };
