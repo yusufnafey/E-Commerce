@@ -105,12 +105,17 @@ class ProductProvider extends Component {
     removedProduct.count = 0;
     removedProduct.total = 0;
 
-    this.setState(() => {
-      return {
-        cart: [...tempCart],
-        products: [...tempProducts]
-      };
-    });
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+          products: [...tempProducts]
+        };
+      },
+      () => {
+        this.addTotals();
+      }
+    );
   };
 
   clearCart = () => {
