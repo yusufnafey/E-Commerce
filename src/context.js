@@ -98,6 +98,9 @@ class ProductProvider extends Component {
     tempCart = tempCart.filter(item => {
       item.id !== id;
     });
+
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removedProduct = tempProducts[index];
   };
 
   clearCart = () => {
