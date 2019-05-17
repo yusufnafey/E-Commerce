@@ -84,7 +84,11 @@ class ProductProvider extends Component {
   };
 
   increment = id => {
-    console.log("increment method");
+    let tempCart = [...this.state.cart];
+
+    const selectedProduct = tempCart.find(item => {
+      item.id === id;
+    });
   };
 
   decrement = id => {
