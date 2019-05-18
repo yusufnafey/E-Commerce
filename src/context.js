@@ -93,6 +93,12 @@ class ProductProvider extends Component {
 
     product.count = product.count + 1;
     product.total = product.count * product.price;
+
+    this.setState(() => {
+      return {
+        cart: [...tempCart]
+      };
+    });
   };
 
   decrement = id => {
