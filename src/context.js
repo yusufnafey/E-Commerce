@@ -90,6 +90,9 @@ class ProductProvider extends Component {
 
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
+
+    product.count = product.count + 1;
+    product.total = product.count * product.price;
   };
 
   decrement = id => {
