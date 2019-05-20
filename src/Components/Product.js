@@ -93,7 +93,7 @@ const ProductWrapper = styled.div`
     transform: scale(1.1);
   }
   .img-container:hover .card-btn {
-    transition: all 1s linear;
+    transition: all 0.3s linear;
     transform: translate(0, 0);
   }
   .card-btn {
