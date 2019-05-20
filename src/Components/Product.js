@@ -33,7 +33,11 @@ export default class Product extends Component {
                       in cart
                     </p>
                   ) : (
-                    <i className="fas fa-cart-plus" />
+                    <React.Fragment>
+                      <h4 className="m-0">
+                        Add to Cart <i className="fas fa-cart-plus" />
+                      </h4>
+                    </React.Fragment>
                   )}
                 </button>
               </div>
