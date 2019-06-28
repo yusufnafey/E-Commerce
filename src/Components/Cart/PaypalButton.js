@@ -45,7 +45,7 @@ export default class MyApp extends React.Component {
         env={env}
         client={client}
         currency={currency}
-        total={this.props.totalAmount}
+        total={this.props.total}
         onError={onError}
         onSuccess={onSuccess}
         onCancel={onCancel}
