@@ -10,7 +10,7 @@ export default class Details extends Component {
         {value => {
           const {
             id,
-            company,
+            console,
             img,
             info,
             price,
@@ -35,7 +35,7 @@ export default class Details extends Component {
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                   <h2>Model: {title}</h2>
                   <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                    Made by: <span className="text-uppercase">{company}</span>
+                    Made by: <span className="text-uppercase">{console}</span>
                   </h4>
                   <h4 className="text-blue">
                     <strong>
