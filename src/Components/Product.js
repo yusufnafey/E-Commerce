@@ -98,10 +98,10 @@ const ProductWrapper = styled.div`
   .card-img-top {
     transition: all 1s linear;
   }
-  .img-container:hover .card-img-top {
+  .card:hover .card-img-top {
     transform: scale(1.1);
   }
-  .img-container:hover .card-btn {
+  .card:hover .card-btn {
     transition: all 0.3s linear;
     transform: translate(0, 0);
   }
