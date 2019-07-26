@@ -10,13 +10,10 @@ export default class Product extends Component {
     const { id, title, console, img, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-        <div className="card">
-          <ProductConsumer>
-            {value => (
-              <div
-                className="img-container p-5"
-                onClick={() => value.handleDetail(id)}
-              >
+        <ProductConsumer>
+          {value => (
+            <div className="card" onClick={() => value.handleDetail(id)}>
+              <div className="img-container p-5">
                 <Link to="/details">
                   <img src={img} alt="product pic" className="card-img-top" />
                 </Link>
@@ -41,28 +38,21 @@ export default class Product extends Component {
                   )}
                 </button>
               </div>
-            )}
-          </ProductConsumer>
-          {/* 
-          <div className="card-footer d-flex justify-content-between">
-            <p className="align-self-center mb-0">{title}</p>
-            <h5 className="text-blue font-italic mb-0">
-              <span className="mr-1">${price}</span>
-            </h5>
-          </div> */}
 
-          {/* footer */}
-          <div className="card-footer">
-            <div className="top d-flex justify-content-around">
-              <p className="align-self-center mb-0">
-                {title} ({console})
-              </p>
+              {/* footer */}
+              <div className="card-footer">
+                <div className="top d-flex justify-content-around">
+                  <p className="align-self-center mb-0">
+                    {title} ({console})
+                  </p>
+                </div>
+                <h5 className="text-blue text-center font-italic mb-0">
+                  <span className="mr-1">${price}</span>
+                </h5>
+              </div>
             </div>
-            <h5 className="text-blue text-center font-italic mb-0">
-              <span className="mr-1">${price}</span>
-            </h5>
-          </div>
-        </div>
+          )}
+        </ProductConsumer>
       </ProductWrapper>
     );
   }
