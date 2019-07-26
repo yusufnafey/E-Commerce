@@ -12,45 +12,45 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <ProductConsumer>
           {value => (
-            <div className="card" onClick={() => value.handleDetail(id)}>
-              <div className="img-container p-5">
-                <Link to="/details">
+            <Link to="/details">
+              <div className="card" onClick={() => value.handleDetail(id)}>
+                <div className="img-container p-5">
                   <img src={img} alt="product pic" className="card-img-top" />
-                </Link>
-                <button
-                  className="card-btn"
-                  disabled={inCart ? true : false}
-                  onClick={() => {
-                    value.addToCart(id);
-                    value.openModal(id);
-                  }}
-                >
-                  {inCart ? (
-                    <p className="text-capitalize mb-0" disabled>
-                      in cart
-                    </p>
-                  ) : (
-                    <React.Fragment>
-                      <h4 className="m-0">
-                        Add to Cart <i className="fas fa-cart-plus" />
-                      </h4>
-                    </React.Fragment>
-                  )}
-                </button>
-              </div>
-
-              {/* footer */}
-              <div className="card-footer">
-                <div className="top d-flex justify-content-around">
-                  <p className="align-self-center mb-0">
-                    {title} ({console})
-                  </p>
+                  <button
+                    className="card-btn"
+                    disabled={inCart ? true : false}
+                    onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}
+                  >
+                    {inCart ? (
+                      <p className="text-capitalize mb-0" disabled>
+                        in cart
+                      </p>
+                    ) : (
+                      <React.Fragment>
+                        <h4 className="m-0">
+                          Add to Cart <i className="fas fa-cart-plus" />
+                        </h4>
+                      </React.Fragment>
+                    )}
+                  </button>
                 </div>
-                <h5 className="text-blue text-center font-italic mb-0">
-                  <span className="mr-1">${price}</span>
-                </h5>
+
+                {/* footer */}
+                <div className="card-footer">
+                  <div className="top d-flex justify-content-around">
+                    <p className="align-self-center mb-0">
+                      {title} ({console})
+                    </p>
+                  </div>
+                  <h5 className="text-blue text-center font-italic mb-0">
+                    <span className="mr-1">${price}</span>
+                  </h5>
+                </div>
               </div>
-            </div>
+            </Link>
           )}
         </ProductConsumer>
       </ProductWrapper>
@@ -69,6 +69,10 @@ Product.propTypes = {
 };
 
 const ProductWrapper = styled.div`
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .card {
     border-color: transparent;
     transition: all 1s linear;
