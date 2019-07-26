@@ -7,7 +7,7 @@ import { ProductConsumer } from "../context";
 
 export default class Product extends Component {
   render() {
-    const { id, title, img, price, inCart } = this.props.product;
+    const { id, title, console, img, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
@@ -43,11 +43,22 @@ export default class Product extends Component {
               </div>
             )}
           </ProductConsumer>
-
-          {/* footer */}
+          {/* 
           <div className="card-footer d-flex justify-content-between">
             <p className="align-self-center mb-0">{title}</p>
             <h5 className="text-blue font-italic mb-0">
+              <span className="mr-1">${price}</span>
+            </h5>
+          </div> */}
+
+          {/* footer */}
+          <div className="card-footer">
+            <div className="top d-flex justify-content-around">
+              <p className="align-self-center mb-0">
+                {title} ({console})
+              </p>
+            </div>
+            <h5 className="text-blue text-center font-italic mb-0">
               <span className="mr-1">${price}</span>
             </h5>
           </div>
