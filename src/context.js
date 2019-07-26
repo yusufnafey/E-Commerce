@@ -37,11 +37,10 @@ class ProductProvider extends Component {
   };
 
   handleDetail = id => {
-    // const product = this.getItem(id);
-    // this.setState(() => {
-    //   return { detailProduct: product };
-    // });
-    console.log("hi");
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
   };
 
   addToCart = id => {
