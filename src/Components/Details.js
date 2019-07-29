@@ -18,28 +18,40 @@ export default class Details extends Component {
             inCart
           } = value.detailProduct;
           return (
-            <div className="container py-5">
+            <div className="container py-2">
               {/* title */}
               <div className="row">
-                <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
-                  <h1 className="text-title">{title}</h1>
+
+                <div className="col-10 mx-auto text-center text-slanted text-blue my-3">
+                  <h1 className="my-0">{title}</h1>
                 </div>
               </div>
               {/* product info */}
               <div className="row">
                 {/* product image */}
                 <div className="col-10 mx-auto col-md-6 my-3">
-                  <img src={img} alt="product" className="img-fluid" />
+                  <img
+                    src={img}
+                    alt="product"
+                    className={
+                      value.detailProduct.console === "Nintendo Switch"
+                        ? "img-fluid rounded w-50"
+                        : "img-fluid rounded w-75"
+                    }
+                  />
                 </div>
                 {/* product text */}
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                  <h2>{title}</h2>
-                  <h5 className="text-uppercase text-muted mt-3 mb-2">
+
+                  <h2 className="text-title text-blue">{title}</h2>
+                  <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                     <span className="text-uppercase">{console}</span>
-                  </h5>
+                  </h4>
+
+
                   <h4 className="text-blue">
                     <strong>
-                      Price: <span>$</span>
+                      <span>$</span>
                       {price}
                     </strong>
                   </h4>
