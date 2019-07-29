@@ -32,12 +32,16 @@ export default class Details extends Component {
                   <img
                     src={img}
                     alt="product"
-                    className="img-fluid rounded w-75"
+                    className={
+                      value.detailProduct.console === "Nintendo Switch"
+                        ? "img-fluid rounded w-50"
+                        : "img-fluid rounded w-75"
+                    }
                   />
                 </div>
                 {/* product text */}
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                  <h2>{title}</h2>
+                  <h2 className="text-title text-blue">{title}</h2>
                   <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                     <span className="text-uppercase">{console}</span>
                   </h4>
