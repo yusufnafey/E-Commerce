@@ -18,10 +18,10 @@ export default class Modal extends Component {
             return (
               <ModalContainer>
                 <div className="container">
-                  <div className="row">
+                  <div className="row d-flex justify-content-center">
                     <div
                       id="modal"
-                      className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5"
+                      className="col-8 m-0 col-md-6 col-lg-4 text-center text-capitalize p-5"
                     >
                       <h5>item added to the cart</h5>
                       <img
@@ -32,16 +32,25 @@ export default class Modal extends Component {
                       />
                       <h5>{title}</h5>
                       <h5 className="text-muted">price: $ {price}</h5>
-                      <Link to="/">
-                        <ButtonContainer onClick={() => closeModal()}>
-                          store
-                        </ButtonContainer>
-                      </Link>
-                      <Link to="/cart">
-                        <ButtonContainer cart onClick={() => closeModal()}>
-                          go to cart
-                        </ButtonContainer>
-                      </Link>
+                      <div className="modal-buttons d-flex justify-content-around">
+                        <Link to="/">
+                          <ButtonContainer
+                            className="m-0"
+                            onClick={() => closeModal()}
+                          >
+                            back to products
+                          </ButtonContainer>
+                        </Link>
+                        <Link to="/cart">
+                          <ButtonContainer
+                            className="m-0"
+                            cart
+                            onClick={() => closeModal()}
+                          >
+                            go to cart
+                          </ButtonContainer>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

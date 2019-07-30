@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-// import { ProductConsumer } from "../context";
 import PropTypes from "prop-types";
 import { ProductConsumer } from "../context";
 
@@ -12,45 +11,45 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <ProductConsumer>
           {value => (
-            <Link to="/details">
-              <div className="card" onClick={() => value.handleDetail(id)}>
+            <div className="card" onClick={() => value.handleDetail(id)}>
+              <Link to="/details">
                 <div className="img-container p-5">
                   <img src={img} alt="product pic" className="card-img-top" />
-                  <button
-                    className="card-btn"
-                    disabled={inCart ? true : false}
-                    onClick={() => {
-                      value.addToCart(id);
-                      value.openModal(id);
-                    }}
-                  >
-                    {inCart ? (
-                      <p className="text-capitalize mb-0" disabled>
-                        in cart
-                      </p>
-                    ) : (
-                      <React.Fragment>
-                        <h4 className="m-0">
-                          Add to Cart <i className="fas fa-cart-plus" />
-                        </h4>
-                      </React.Fragment>
-                    )}
-                  </button>
                 </div>
+              </Link>
 
-                {/* footer */}
-                <div className="card-footer">
-                  <div className="top d-flex justify-content-around">
-                    <p className="align-self-center mb-0">
-                      {title} ({console})
-                    </p>
-                  </div>
-                  <h5 className="text-blue text-center font-italic mb-0">
-                    <span className="mr-1">${price}</span>
-                  </h5>
+              {/* footer */}
+              <div className="card-footer">
+                <button
+                  className="card-btn"
+                  disabled={inCart ? true : false}
+                  onClick={() => {
+                    value.addToCart(id);
+                    value.openModal(id);
+                  }}
+                >
+                  {inCart ? (
+                    <h4 className="text-capitalize m-0" disabled>
+                      in cart
+                    </h4>
+                  ) : (
+                    <React.Fragment>
+                      <h4 className="m-0">
+                        Add to Cart <i className="fas fa-cart-plus" />
+                      </h4>
+                    </React.Fragment>
+                  )}
+                </button>
+                <div className="top">
+                  <p className="mb-0">
+                    {title} ({console})
+                  </p>
                 </div>
+                <h5 className="text-blue font-italic mb-0">
+                  <span className="mr-1">${price}</span>
+                </h5>
               </div>
-            </Link>
+            </div>
           )}
         </ProductConsumer>
       </ProductWrapper>
@@ -81,6 +80,8 @@ const ProductWrapper = styled.div`
     background: transparent;
     border-top: transparent;
     transition: all 1s linear;
+    position: relative;
+    overflow: hidden;
   }
   &:hover {
     .card {
@@ -113,12 +114,14 @@ const ProductWrapper = styled.div`
     background: var(--lightBlue);
     border: none;
     color: var(--mainWhite);
-    font-size: 1.5rem;
+    font-size: 3rem;
     border-radius: 0.5rem 0 0 0;
     transform: translate(100%, 100%);
   }
   .card-btn:hover {
     color: var(--mainBlue);
     cursor: pointer;
+  }
+  .btn-container {
   }
 `;
