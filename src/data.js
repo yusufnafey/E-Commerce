@@ -102,9 +102,9 @@ export const storeProducts = [
   },
   {
     id: 9,
-    title: "Super Smash Bros. Ultimate",
-    img: "img/ssbultimatenintendo.jpg",
-    price: 30,
+    title: "Luigi's Mansion 3",
+    img: "img/lm3nintendo.jpg",
+    price: 59.99,
     console: "Nintendo Switch",
     info:
       "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
@@ -114,9 +114,9 @@ export const storeProducts = [
   },
   {
     id: 10,
-    title: "Super Mario Maker 2",
-    img: "img/smm2nintendo.jpg",
-    price: 30,
+    title: "Carnival Games",
+    img: "img/carnivalgamesnintendo.jpg",
+    price: 19.99,
     console: "Nintendo Switch",
     info:
       "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
@@ -124,11 +124,12 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 11,
     title: "Super Mario Party",
     img: "img/smpnintendo.jpg",
-    price: 30,
+    price: 49.99,
     console: "Nintendo Switch",
     info:
       "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
@@ -140,7 +141,7 @@ export const storeProducts = [
     id: 12,
     title: "Minecraft",
     img: "img/minecraftnintendo.jpg",
-    price: 30,
+    price: 19.99,
     console: "Nintendo Switch",
     info:
       "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
