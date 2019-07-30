@@ -11,45 +11,45 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <ProductConsumer>
           {value => (
-            <Link to="/details">
-              <div className="card" onClick={() => value.handleDetail(id)}>
+            <div className="card" onClick={() => value.handleDetail(id)}>
+              <Link to="/details">
                 <div className="img-container p-5">
                   <img src={img} alt="product pic" className="card-img-top" />
                 </div>
+              </Link>
 
-                {/* footer */}
-                <div className="card-footer">
-                  <button
-                    className="card-btn"
-                    disabled={inCart ? true : false}
-                    onClick={() => {
-                      value.addToCart(id);
-                      value.openModal(id);
-                    }}
-                  >
-                    {inCart ? (
-                      <h4 className="text-capitalize m-0" disabled>
-                        in cart
+              {/* footer */}
+              <div className="card-footer">
+                <button
+                  className="card-btn"
+                  disabled={inCart ? true : false}
+                  onClick={() => {
+                    value.addToCart(id);
+                    value.openModal(id);
+                  }}
+                >
+                  {inCart ? (
+                    <h4 className="text-capitalize m-0" disabled>
+                      in cart
+                    </h4>
+                  ) : (
+                    <React.Fragment>
+                      <h4 className="m-0">
+                        Add to Cart <i className="fas fa-cart-plus" />
                       </h4>
-                    ) : (
-                      <React.Fragment>
-                        <h4 className="m-0">
-                          Add to Cart <i className="fas fa-cart-plus" />
-                        </h4>
-                      </React.Fragment>
-                    )}
-                  </button>
-                  <div className="top">
-                    <p className="mb-0">
-                      {title} ({console})
-                    </p>
-                  </div>
-                  <h5 className="text-blue font-italic mb-0">
-                    <span className="mr-1">${price}</span>
-                  </h5>
+                    </React.Fragment>
+                  )}
+                </button>
+                <div className="top">
+                  <p className="mb-0">
+                    {title} ({console})
+                  </p>
                 </div>
+                <h5 className="text-blue font-italic mb-0">
+                  <span className="mr-1">${price}</span>
+                </h5>
               </div>
-            </Link>
+            </div>
           )}
         </ProductConsumer>
       </ProductWrapper>
