@@ -15,6 +15,10 @@ export default class Product extends Component {
               <div className="card" onClick={() => value.handleDetail(id)}>
                 <div className="img-container p-5">
                   <img src={img} alt="product pic" className="card-img-top" />
+                </div>
+
+                {/* footer */}
+                <div className="card-footer">
                   <button
                     className="card-btn"
                     disabled={inCart ? true : false}
@@ -35,16 +39,12 @@ export default class Product extends Component {
                       </React.Fragment>
                     )}
                   </button>
-                </div>
-
-                {/* footer */}
-                <div className="card-footer">
-                  <div className="top d-flex justify-content-around">
-                    <p className="align-self-center mb-0">
+                  <div className="top">
+                    <p className="mb-0">
                       {title} ({console})
                     </p>
                   </div>
-                  <h5 className="text-blue text-center font-italic mb-0">
+                  <h5 className="text-blue font-italic mb-0">
                     <span className="mr-1">${price}</span>
                   </h5>
                 </div>
@@ -80,6 +80,8 @@ const ProductWrapper = styled.div`
     background: transparent;
     border-top: transparent;
     transition: all 1s linear;
+    position: relative;
+    overflow: hidden;
   }
   &:hover {
     .card {
@@ -112,12 +114,14 @@ const ProductWrapper = styled.div`
     background: var(--lightBlue);
     border: none;
     color: var(--mainWhite);
-    font-size: 1.5rem;
+    font-size: 3rem;
     border-radius: 0.5rem 0 0 0;
     transform: translate(100%, 100%);
   }
   .card-btn:hover {
     color: var(--mainBlue);
     cursor: pointer;
+  }
+  .btn-container {
   }
 `;
