@@ -25,9 +25,9 @@ export default class Product extends Component {
                     }}
                   >
                     {inCart ? (
-                      <p className="text-capitalize mb-0" disabled>
+                      <h4 className="text-capitalize m-0" disabled>
                         in cart
-                      </p>
+                      </h4>
                     ) : (
                       <React.Fragment>
                         <h4 className="m-0">
