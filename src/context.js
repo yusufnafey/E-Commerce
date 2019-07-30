@@ -43,7 +43,7 @@ class ProductProvider extends Component {
     });
   };
 
-  addToCart = id => {
+  addToCart = (id, e) => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
     const product = tempProducts[index];
@@ -63,9 +63,13 @@ class ProductProvider extends Component {
         this.addTotals();
       }
     );
+
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
   };
 
-  openModal = id => {
+  openModal = (id, e) => {
     const product = this.getItem(id);
     this.setState(() => {
       return {
@@ -73,6 +77,10 @@ class ProductProvider extends Component {
         modalOpen: true
       };
     });
+
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
   };
 
   closeModal = () => {
