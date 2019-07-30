@@ -32,16 +32,25 @@ export default class Modal extends Component {
                       />
                       <h5>{title}</h5>
                       <h5 className="text-muted">price: $ {price}</h5>
-                      <Link to="/">
-                        <ButtonContainer onClick={() => closeModal()}>
-                          back to products
-                        </ButtonContainer>
-                      </Link>
-                      <Link to="/cart">
-                        <ButtonContainer cart onClick={() => closeModal()}>
-                          go to cart
-                        </ButtonContainer>
-                      </Link>
+                      <div className="modal-buttons d-flex justify-content-around">
+                        <Link to="/">
+                          <ButtonContainer
+                            className="m-0"
+                            onClick={() => closeModal()}
+                          >
+                            back to products
+                          </ButtonContainer>
+                        </Link>
+                        <Link to="/cart">
+                          <ButtonContainer
+                            className="m-0"
+                            cart
+                            onClick={() => closeModal()}
+                          >
+                            go to cart
+                          </ButtonContainer>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
