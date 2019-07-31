@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { ProductProvider } from "./context";
 import "./index.scss";
 import App from "./App";
 
 ReactDOM.render(
   <ProductProvider>
-    <Router>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   </ProductProvider>,
   document.getElementById("root")
 );
