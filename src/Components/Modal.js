@@ -5,6 +5,20 @@ import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
 
 export default class Modal extends Component {
+  componentWillMount() {
+    document.addEventListener("click", this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("click", this.handleClick, false);
+  }
+
+  handleClick = e => {
+    if (!this.node.contains(e.target)) {
+      () => closeModal();
+    }
+  };
+
   render() {
     return (
       <ProductConsumer>
@@ -16,7 +30,7 @@ export default class Modal extends Component {
             return null;
           } else {
             return (
-              <ModalContainer>
+              <ModalContainer ref={node => (this.node = node)}>
                 <div className="container">
                   <div className="row d-flex justify-content-center">
                     <div
