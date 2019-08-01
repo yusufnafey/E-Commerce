@@ -17,9 +17,12 @@ export default class Modal extends Component {
           } else {
             return (
               <ModalContainer>
-                <div className="container-fluid fill p-0 d-flex justify-content-center align-items-center">
-                  <div className="row fillv1" />
-                  <div className="row d-flex justify-content-center fillv1">
+                <Top onClick={() => closeModal()} />
+                <Right onClick={() => closeModal()} />
+                <Bottom onClick={() => closeModal()} />
+                <Left onClick={() => closeModal()} />
+                <div className="container">
+                  <div className="row d-flex justify-content-center">
                     <div
                       id="modal"
                       className="col-8 m-0 col-md-6 col-lg-4 text-center text-capitalize p-5"
@@ -70,11 +73,43 @@ const ModalContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   #modal {
     background: var(--mainWhite);
   }
+`;
+
+const Top = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 13%;
+`;
+
+const Right = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 100%;
+`;
+
+const Bottom = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 13%;
+`;
+
+const Left = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 100%;
 `;
