@@ -10,7 +10,7 @@ export default class Modal extends Component {
       <ProductConsumer>
         {value => {
           const { modalOpen, closeModal } = value;
-          const { img, title, price, console } = value.modalProduct;
+          const { img, title, price } = value.modalProduct;
 
           if (!modalOpen) {
             return null;
@@ -33,11 +33,7 @@ export default class Modal extends Component {
                         src={img}
                         className="image-fluid"
                         alt="product"
-                        style={
-                          { console } === "Nintendo Switch"
-                            ? { width: "5rem" }
-                            : { width: "15rem" }
-                        }
+                        style={{ width: "15rem" }}
                       />
 
                       <h5>{title}</h5>
