@@ -10,13 +10,17 @@ export default class Modal extends Component {
       <ProductConsumer>
         {value => {
           const { modalOpen, closeModal } = value;
-          const { img, title, price } = value.modalProduct;
+          const { img, title, price, console } = value.modalProduct;
 
           if (!modalOpen) {
             return null;
           } else {
             return (
               <ModalContainer>
+                <Top onClick={() => closeModal()} />
+                <Right onClick={() => closeModal()} />
+                <Bottom onClick={() => closeModal()} />
+                <Left onClick={() => closeModal()} />
                 <div className="container">
                   <div className="row d-flex justify-content-center">
                     <div
@@ -24,12 +28,18 @@ export default class Modal extends Component {
                       className="col-8 m-0 col-md-6 col-lg-4 text-center text-capitalize p-5"
                     >
                       <h5>item added to the cart</h5>
+
                       <img
                         src={img}
                         className="image-fluid"
                         alt="product"
-                        style={{ width: "15rem" }}
+                        style={
+                          { console } === "Nintendo Switch"
+                            ? { width: "5rem" }
+                            : { width: "15rem" }
+                        }
                       />
+
                       <h5>{title}</h5>
                       <h5 className="text-muted">price: $ {price}</h5>
                       <div className="modal-buttons d-flex justify-content-around">
@@ -69,11 +79,43 @@ const ModalContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   #modal {
     background: var(--mainWhite);
   }
+`;
+
+const Top = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 13%;
+`;
+
+const Right = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 100%;
+`;
+
+const Bottom = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 13%;
+`;
+
+const Left = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 100%;
 `;
